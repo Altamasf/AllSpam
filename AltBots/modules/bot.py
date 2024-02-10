@@ -21,10 +21,10 @@ from datetime import datetime
 async def ping(e):
     if e.sender_id in SUDO_USERS:
         start = datetime.now()
-        altron = await e.reply(f"» __ASHWANI__")
+        altron = await e.reply(f"» 🇹𝐇𝐔𝐍𝐃𝐄𝐑")
         end = datetime.now()
         mp = (end - start).microseconds / 1000
-        await altron.edit(f"__KISKI CHUDAI KARNI HAI__\n» `{mp} ᴍꜱ`")
+        await altron.edit(f"__🫧 🇹𝐇𝐔𝐍𝐃𝐄𝐑 𝐢𝐬 𝐫𝐞𝐚𝐝𝐲 𝐭𝐨 𝐛𝐫𝐢𝐧𝐠 𝐂𝐲𝐜𝐥𝐨𝐧𝐞⚡️⛈__\n» `{mp} ᴍꜱ`")
 
 
 @X1.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
@@ -39,7 +39,7 @@ async def ping(e):
 @X10.on(events.NewMessage(incoming=True, pattern=r"\%sreboot(?: |$)(.*)" % hl))
 async def restart(e):
     if e.sender_id in SUDO_USERS:
-        await e.reply(f"`BOT ABHI RESTART HO RHA HAI..RUKO.`")
+        await e.reply(f"`🥀𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶 🇹𝐇𝐔𝐍𝐃𝐄𝐑 𝙱𝙾𝚃𝚂🥀...`")
         try:
             await X1.disconnect()
         except Exception:
@@ -99,7 +99,7 @@ async def addsudo(event):
         Heroku = heroku3.from_key(HEROKU_API_KEY)
         sudousers = getenv("SUDO_USERS", default=None)
 
-        ok = await event.reply(f"» __HO RHA HAI ADD SUDO MAI RUKO..__")
+        ok = await event.reply(f"» __🫧𝐘𝐨𝐮 𝐆𝐨𝐭 𝐒𝐮𝐝𝐨 𝐎𝐟 𝐓𝐡𝐞 𝐁𝐨𝐭⚡️⛈...__🚀🚀")
         target = ""
         if HEROKU_APP_NAME is not None:
             app = Heroku.app(HEROKU_APP_NAME)
@@ -113,18 +113,18 @@ async def addsudo(event):
             reply_msg = await event.get_reply_message()
             target = reply_msg.sender_id
         except:
-            await ok.edit("» BSDK...REPLY KRKE KAR !!")
+            await ok.edit("» 🌺𝚁𝙴𝙿𝙻𝚈 𝚃𝙾 𝙰 𝚄𝚂𝙴𝚁🌺 !!")
             return
 
         if str(target) in sudousers:
-            await ok.edit(f"YE HAMARA DOST HAI ISKO MAAT MARO ADD..BSDK.. !!")
+            await ok.edit(f" 🫧𝐘𝐨𝐮 𝐡𝐚𝐯𝐞 𝐒𝐮𝐝𝐨 𝐎𝐟 𝐓𝐡𝐞 𝐁𝐨𝐭⚡️⛈ !!")
         else:
             if len(sudousers) > 0:
                 newsudo = f"{sudousers} {target}"
             else:
                 newsudo = f"{target}"
-            await ok.edit(f"» **ɴᴇᴡ ꜱᴜᴅᴏ ᴜꜱᴇʀ**: `{target}`\n» `ADD KAR DIYE HAI SUDO..BOT RESTART HO RHA HAI`")
+            await ok.edit(f"» **ɴᴇᴡ ꜱᴜᴅᴏ ᴜꜱᴇʀ**: `{target}`\n» `💖𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶 🇹𝐇𝐔𝐍𝐃𝐄𝐑 𝙱𝙾𝚃𝚂💖...`")
             heroku_var["SUDO_USERS"] = newsudo    
     
     elif event.sender_id in SUDO_USERS:
-        await event.reply("» BSDK SIRF BOT OWNER SUDO DE SKTA HAI...")
+        await event.reply("» 𝚂𝙾𝚁𝚁𝚈, 𝙾𝙽𝙻𝚈 𝙾𝚆𝙽𝙴𝚁 𝙲𝙰𝙽 𝙰𝙲𝙴𝚂𝚂 𝚃𝙷𝙸𝚂 𝙲𝙾𝙼𝙼𝙰𝙽𝙳.")
